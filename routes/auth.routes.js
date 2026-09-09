@@ -11,3 +11,4 @@ authRouter.post('/register', (req, res) => {
 authRouter.post('/logout', (req, res) => {
     res.send({body:'Logout route'});
 });
+export default authRouter;
