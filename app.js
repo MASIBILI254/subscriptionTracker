@@ -4,9 +4,9 @@ import userRouter from './routes/user.routes.js'
 import authRouter from './routes/auth.routes.js'
 import subscriptionRouter from './routes/subscription.routes.js'
 const app = express()
-app.use('/users', userRouter)
-app.use('/auth', authRouter)
-app.use('/subscriptions', subscriptionRouter)
+app.use('/api/v1/users', userRouter)
+app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/subscriptions', subscriptionRouter)
 app.get('/', (req, res) => {
     res.send({body:'Welcome to subscription Tracker..'})
 })
