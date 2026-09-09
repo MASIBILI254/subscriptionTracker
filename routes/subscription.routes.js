@@ -2,7 +2,7 @@ import {Router} from 'express';
 
 const subscriptionRouter = Router();
 
-subscriptionRouter.get('/', (req, res) => {
+subscriptionRouter.get('/all', (req, res) => {
     res.send({body:'Get all subscriptions route'});
 });
 subscriptionRouter.get('/:id', (req, res) => {
