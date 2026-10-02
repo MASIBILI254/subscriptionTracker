@@ -1,7 +1,7 @@
 import {mongoose} from 'mongoose'
 import {DB_URL, NODE_ENV} from '../config/env.js'
 
-//check if there is a database url in the environment variables
+//check if there is a database url in the .env file, if not throw an error
 if(!DB_URL){
     throw new Error('Database URL is not defined in the environment variables')
 }
