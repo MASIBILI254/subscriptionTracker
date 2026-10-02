@@ -65,7 +65,7 @@ const subscriptionSchema = new mongoose.Schema({
         index: true
     }
 },options = {timestamps: true});
-//auto calculate renewalDate based on frequency and startDate
+//auto calculate renewalDate based on frequency and startDate if not provided
 subscriptionSchema.pre('save', function(next) {
     if (!this.renewalDate) {
         const renewalPeriods={
