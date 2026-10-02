@@ -1,10 +1,10 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:24.21.0-alpine3.24' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Docker Test') {
             steps {
-                sh 'node --version'
+                bat 'docker run --rm node:24.21.0-alpine3.24 node --version'
             }
         }
     }
